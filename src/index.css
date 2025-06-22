@@ -1,18 +1,27 @@
 @import "tailwindcss";
 
-
 @theme {
   --font-display: "Satoshi", "sans-serif";
-  --color-primary : "#";
-  --color-bg : "#"
+  --color-primary: "#";
+  --color-bg: "#";
 }
 
-@keyframes gradient-x{
-  0%, 100% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }

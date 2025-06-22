@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Intro() {
+    const navigate = useNavigate();
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 overflow-hidden relative">
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 bg-[length:200%_200%] animate-[gradient-x_6s_ease_infinite] opacity-70"></div>
@@ -15,7 +18,7 @@ export default function Intro() {
           and fun.
         </p>
 
-        <button className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/30 transition-all hover:scale-105 transform duration-300 animate-pulse">
+        <button onClick={() => navigate("/register")} className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-cyan-500/30 transition-all hover:scale-105 transform duration-300 animate-pulse">
           Register Now
         </button>
 
@@ -33,14 +36,14 @@ export default function Intro() {
               <span className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </span>
-              <span className="text-white/90">{feature.text}</span>
+              <span className="text-white">{feature.text}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div className="absolute w-full h-full overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(30)].map((_, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-white/20"
